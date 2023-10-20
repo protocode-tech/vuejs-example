@@ -1,0 +1,11 @@
+{
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+  ],
+  rules: {
+    "indent": ["error", 4],
+    "semi": ["error", "always"],
+    "no-trailing-spaces": ["error"]
+  }
+}
