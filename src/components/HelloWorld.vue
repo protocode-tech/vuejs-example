@@ -13,7 +13,7 @@ defineProps({
       {{ msg }}
     </h1>
     <h3>
-      You’ve successfully created a project with
+      Coucou le bic
       <a
         href="https://vitejs.dev/"
         target="_blank"
