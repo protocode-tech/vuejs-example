@@ -1,12 +1,19 @@
-version: '3'
+# Made with Protocode
+# Generated on 2025-04-09 at 08:18:11
 
+version: '3.8'
 services:
-    app:
-        image: node:16-alpine
-        container_name: COMPOSE_PROJECT_NAME_app
-        environment:
-            VIRTUAL_HOST: $COMPOSE_PROJECT_NAME-app.local
-        volumes:
-            - '.:/app'
-        working_dir: /app
-        network_mode: bridge
+  app:
+    build:
+      context: .
+      dockerfile: .protocode/Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - '80'
+    environment:
+      VIRTUAL_HOST: ${VIRTUAL_HOST:-app.docker.local}
+    command: npm run dev
+    labels:
+      protocode.alias.node: docker-compose run --rm app node
+      protocode.alias.npm: docker-compose run --rm app npm

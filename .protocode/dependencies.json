@@ -1,0 +1,37 @@
+
+{
+    "runtime_environments": [
+        {
+            "name": "Node.js",
+            "version": "14.18",
+            "paths": [
+                "node"
+            ]
+        }
+    ],
+    "dependency_managers": [
+        {
+            "name": "npm",
+            "version": "8.0",
+            "path": "npm"
+        }
+    ],
+    "languages": [
+        {
+            "name": "JavaScript",
+            "version": "ES6+ (via Vite and Vue 3.3"
+        },
+        {
+            "name": "HTML",
+            "version": "HTML5"
+        }
+    ],
+    "ports": [
+        80
+    ],
+    "databases": [],
+    "frameworks": [],
+    "frameworks_cli": [],
+    "setup_script": "npm install --yes",
+    "startup_script": "npm run dev"
+}
